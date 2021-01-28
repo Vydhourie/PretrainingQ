@@ -124,29 +124,21 @@ class DQNAgent(object):
 
 
     def state_obs(self, state):
-        u =1
-        if len(state) ==4:
-            history = state
-        else:
-            history = state['prev']
 
-        new_obsH = []
-        new_actionsH = []
-        new_combo = []
-        while len(history) == 7:
-            # new_obsH.append(history['new_obs'])
-            # new_actionsH.append(history['new_actions'])
-            # new_combo.append(history['new_obs'])
-            # new_combo.append(history['new_actions'])
-            history = history['prev']
+        # if len(state) ==4:
+        #     history = state
+        # else:
+        #     history = state['prev']
+        #
+        # new_obsH = []
+        # new_actionsH = []
+        # new_combo = []
+        # while len(history) == 7:
+        #     history = history['prev']
 
 
-        #print(history['cards_record'])
-        #print(history['action_record'])
-        #print(history['traj_record'])
-        #print(history['sep_traj_record'])
-
-        hist0 = ' '.join(history['sep_traj_record'])
+        #hist0 = ' '.join(history['sep_traj_record'])
+        hist0 = ' '.join(state['sep_traj_record'])
 
         if hist0 != '':
 

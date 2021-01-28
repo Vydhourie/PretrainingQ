@@ -70,11 +70,6 @@ class GinRummyEnv(Env):
             # extracted_state['traj_record'] = self.traj_recorder
             extracted_state['sep_traj_record'] = self.sep_traj_recorder
 
-
-
-
-
-
         return extracted_state
 
     def get_payoffs(self):
